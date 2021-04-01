@@ -7,10 +7,11 @@
 </head>
 <body>
     <a href="index.html">Voltar para a página principal</a>
-    <br>
-    <audio controls src="https://sound-effects-media.bbcrewind.co.uk/mp3/07003050.mp3">
-
-
-
+    <br> <br>
+    <audio preload="metadata" controls src="https://sound-effects-media.bbcrewind.co.uk/mp3/07003050.mp3">
+        <!-- Se o navegador for muito antigo e incapaz de reproduzir o áudio,
+            será exibida a mensagem abaixo. -->
+        <p>Seu navegador não suporta áudios nativos HTML. Faça o <a href="audio/trilha.mp3" download="trilha.mp3" type="audio/mpeg">download</a> do arquivo.</p>
+    </audio>
 </body>
 </html>
