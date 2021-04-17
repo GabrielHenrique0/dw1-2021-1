@@ -9,13 +9,11 @@ body {
     font-size: 18px;                /* Tamanho da fonte */
     border-radius: 16px;            /* Bordas arredondadas */
     background-color: white;     /* Cor de fundo */
-    margin: 50px 35px 35px 20px;
-    padding: 20px;
-
-
+    margin: 50px 20px 35px 35px;    /* INSTRUÇÃO 1 */
+    padding: 20px;                  /* INSTRUÇÃO 1 */
 }
 #A{
-    color: green;
+    color: green;       /* INSTRUÇÃO 5 */
 }
 #img {
     width: 100%; /* A imagem ocupará 100% da largura disponível */
@@ -23,12 +21,13 @@ body {
     min-width: 100px; /* Largura mínima em píxels */
     align-content: center;
 }
-h1 {
+h1, h2 {
     color: navy;        /* Cor do texto */
-                                 
+}
+h1{                                
     text-shadow: 2px 2px rgba(128, 128, 128, 0.4);    /* Sombra do texto */
-    font-size: 3em;
-    text-align: center;
+    font-size: 3rem;        /* INSTRUÇÃO 2 */
+    text-align: center;     /* INSTRUÇÃO 2 */
 }
 figcaption {
     font-style: italic;      /* Estilo da fonte */
@@ -43,21 +42,30 @@ iframe {                /* Elemento que contém o vídeo do Youtube */
     display: block;     /* Exibição em bloco */
     margin: 0 auto;     /* Centraliza horizontalmente */
 }
-#L{
-    text-align: right;
+p {
+    text-align: right;      /* INSTRUÇÃO 6 */
   }
 #B{
-    color: greenyellow;
+    color: greenyellow;     /* INSTRUÇÃO 5 */
 }
+
 #C{
-    color: blueviolet;
+    color: blueviolet;      /* INSTRUÇÃO 5 */
 }
+
 #D{
-    color: blue;
+    color: blue;        /* INSTRUÇÃO 5 */
 }
+
 #E{
-    color: red;
+    color: red;     /* INSTRUÇÃO 5 */
 }
+
 h2{
-    font-size: 1.5em;
+    font-size: 1.5em;   /* INSTRUÇÃO 7 */
+
+}
+figure {
+    text-align: center;     /* INSTRUÇÃO 3 */
+    /* font-size: 150%;     /*INSTRUÇÃO 7, alternativa */
 }
