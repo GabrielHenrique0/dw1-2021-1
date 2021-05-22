@@ -15,6 +15,7 @@
 * { /* Todos os elementos */
     padding: 0;
     margin: 0;
+    /* Faz com que bordas e margens sejam considerados no tamanho total do elemento */
     /* Exemplo de família de fonte sem serifa
     font-family: Calibri, Arial, sans; */
 
@@ -27,6 +28,8 @@
     /* Família de fontes da web (webfonts) */
     font-family: Raleway, Calibri, Arial, sans;
     font-size: 16px;
+    /* Faz com que bordas e margens sejam considerados no tamanho total do elemento */
+    box-sizing: border-box;
 }
 
 html {              /* Tamnho de fonte padrão do documento */
@@ -113,7 +116,7 @@ nav {
     padding: 20px;
     /* Este elemento e seus filhos usarão flexbox */
     display: flex;
-    flex-direction: row; /* Os filhos ficarão em linha */
+    flex-direction: row; /* Os filhos ficarão em linha, na horizontal */
 }
 
 main, aside {
@@ -125,6 +128,7 @@ main, aside {
     /* Sombra (drop-down shadow) */
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.25);
     flex-grow: 1;   /* 1 unidade de largura (padrão) */
+    max-width: 100%;
 }
 
 main {
@@ -187,11 +191,13 @@ article > h2 {
     width: 450px;
     margin-right: 24px;
     border-radius: 4px;
+    /* Largura máxima limitada à largura do pai */
+    max-width: 100%;
 }
 
 .foto-texto {
     display: flex;
-    flex-direction: row; /* Os filhos ficarão em linha */
+    flex-direction: row; /* Os filhos ficarão em linha, na horizontal */
 }
 
 aside > article > img {
@@ -199,6 +205,8 @@ aside > article > img {
     /* Margin auto à esquerda e à direita centraliza o elemento quando este é display: block */
     margin: 0 auto;
     border-radius: 4px; /* Borda arrendondada */
+    /* Largura máxima é 100% da largura do pai */
+    max-width: 100%;
 }
 
 aside > article > h1 > a {
@@ -239,4 +247,64 @@ footer ul li:last-child{
 footer img {
     width: 200px;
     height: 100%;
+}
+
+/* Regras para larguras específicas de tela */ /* Breakpoint (ponto de quebra) */
+@media screen and (max-width: 1020px) {
+    main {
+        width: 60%;
+    }
+    aside {
+        width: 40%;
+    }
+}
+.foto-texto {
+    flex-direction: column; /* Os filhos ficarão em coluna, na vertical */
+}
+.destaque img {
+    margin-right: 0px;
+    margin-bottom: 24px;
+}
+
+@media screen and (max-width: 800px) {
+    /*
+        A FAZER: colocar o menu em um botão
+    */
+    #content {
+        flex-direction: column; /* Os filhos ficarão em linha, na vertical */
+    }
+    main {
+        width: 100%;
+    }
+    aside {
+        margin-left: 0;
+        width: 100%;
+    }
+    aside > article > h1 {
+        text-align: center;
+    }
+    .destaque img {
+        /* Centralizar a imagem */
+        margin-left: auto;
+        margin-right: auto;
+    }
+    footer {
+        flex-direction: column;
+    }
+    footer > * { /* Todos os filhos DIRETOS de footer */
+        margin-bottom: 12px;
+
+    }
+    footer ul li:first-child { /* Só o primeiro (fisrt-child) li */
+        padding-left: 0;
+    }
+    footer address {
+        text-align: right;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    /*
+        A FAZER: colocar o logo principal e os ícones de redes sociais em coluna
+    */
 }
